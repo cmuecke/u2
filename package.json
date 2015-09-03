@@ -1,0 +1,31 @@
+{
+  "name": "u2-mock",
+  "version": "0.0.1",
+  "description": "Mocking Framework for u2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer-core": "^5.2.1",
+    "connect-livereload": "^0.5.3",
+    "css-mqpacker": "^4.0.0",
+    "cssnano": "^2.6.1",
+    "express": "^4.13.3",
+    "express-handlebars": "^2.0.1",
+    "fs-extra": "^0.24.0",
+    "gulp-express": "^0.3.5",
+    "gulp-livereload": "^3.8.0",
+    "gulp-postcss": "^6.0.0",
+    "lodash": "^3.10.1",
+    "nodemon": "^1.4.1",
+    "postcss-nested": "^1.0.0",
+    "postcss-simple-vars": "^1.0.0",
+    "tiny-lr": "^0.1.6"
+  },
+  "devDependencies": {
+    "babel-core": "^5.8.23"
+  }
+}

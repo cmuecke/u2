@@ -1,0 +1,11 @@
+<header>
+  <h1>{{shop.name}}</h1>
+  <h3>{{shop.slogan}}</h3>
+  <img src="{{shop.logo}}" />
+
+  <ul>
+    {{#each navigation}}
+    <li><a href="{{target}}">{{title}}</a></li>
+    {{/each}}
+  </ul>
+</header>

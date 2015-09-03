@@ -1,0 +1,24 @@
+{
+    "shop": {
+        "name": "Milestones",
+        "slogan": "Harder than a rock",
+        "logo": "data/images/logo.gif"
+    },
+
+    "navigation": [{
+            "title": "Jackets",
+            "target": "/category/Jackets"
+        }, {
+            "title": "Shoes",
+            "target": "/category/Shoes"
+        }, {
+            "title": "Equipment",
+            "target": "/category/Equipment"
+        }, {
+            "title": "Backpacks",
+            "target": "/category/Backpacks"
+        }, {
+            "title": "Tents",
+            "target": "/category/Tents"
+        }]
+}
