@@ -1,0 +1,17 @@
+.navigation {
+  margin: 0;
+  list-style-type: none;
+  display: none;
+
+  li {
+    display: inline-block;
+
+    + li {
+      margin-left: 1em;
+    }
+  }
+}
+
+.trigger:checked + .navigation {
+  display: block;
+}

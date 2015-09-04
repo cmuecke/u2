@@ -1,11 +1,6 @@
-<header>
-  <h1>{{shop.name}}</h1>
-  <h3>{{shop.slogan}}</h3>
-  <img src="{{shop.logo}}" />
-
-  <ul>
-    {{#each navigation}}
-    <li><a href="{{target}}">{{title}}</a></li>
-    {{/each}}
-  </ul>
+<header class="header">
+  <img class="header-module" src="{{Shop.logo}}" alt="{{Shop.Title}}" />
+  <h1 class="header-module visually-hidden">{{Shop.Title}}</h1>
+  <h3 class="header-module visually-hidden">{{Shop.Slogan}}</h3>
+  {{>navigation}}
 </header>

@@ -1,0 +1,15 @@
+{{#if navigation}}
+  <nav>
+    <span class="show-menu">
+      <label for="trigger" title="Menu">
+        <span class="material-icons">menu</span>
+      </label>
+    </span>
+    <input type="checkbox" id="trigger" class="trigger visually-hidden" />
+    <ul class="header-module navigation">
+      {{#each navigation}}
+        <li><a href="{{target}}" title="{{title}}">{{title}}</a></li>
+      {{/each}}
+    </ul>
+  </nav>
+{{/if}}

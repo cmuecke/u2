@@ -4,11 +4,15 @@
 
 {{{content.description-epilogue}}}
 
+<ul class="list-category list-unstyled list-grid-1 list-grid-medium-3 list-grid-large-3">
 {{#each products}}
-  <div class="product">
-    <h4>{{name}}</h4>
-    <p>{{description}}</p>
-    <span class="price">{{price}}</span>
-    <p><img src="{{image}}" /></p>
-  </div>
+  <li>
+    <div class="center-image-container">
+      <img class="product-image" src="{{image}}" />
+    </div>
+    <h4 class="product-title">{{name}}</h4>
+    <h3 class="product-price">{{price}}</h3>
+    {{!-- <p>{{description}}</p>
+ --}}  </li>
 {{/each}}
+</ul>

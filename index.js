@@ -6,7 +6,7 @@ var express = require('express'),
     path = require('path'),
     livereload = require('connect-livereload'),
     routes = require('./controller');
-
+console.log(routes);
 var app = express();
 
 // LIVERELOAD
@@ -28,6 +28,7 @@ app.use('/data', express.static('mock-data'));
 app.use('/dist', express.static('theme/dist'));
 
 app.use('/', routes.startpage);
+app.use('/product', routes.product);
 
 app.listen(8080, function () {
     console.log('Listening on http://%s:%s', 'localhost', 8080);

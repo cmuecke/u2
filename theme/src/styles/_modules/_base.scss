@@ -1,0 +1,25 @@
+//
+// Essentials
+* {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+//
+// Links
+a {
+  color: $link-color;
+  text-decoration: none;
+  background-color: transparent;
+
+  &:hover {
+    color: $link-color-hover;
+  }
+}

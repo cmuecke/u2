@@ -1,8 +1,8 @@
 {
-    "shop": {
-        "name": "Milestones",
-        "slogan": "Harder than a rock",
-        "logo": "data/images/logo.gif"
+    "Shop": {
+        "Title": "Milestones",
+        "Slogan": "Harder than a rock",
+        "Logo": "data/images/logo.gif"
     },
 
     "navigation": [{

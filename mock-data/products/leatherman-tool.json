@@ -1,6 +1,12 @@
 {
-  "name": "Leatherman Tool Survival",
-  "price": "72,95€",
-  "image": "data/images/products/leatherman-tool.jpg",
-  "description": "The original in stainless steel. The pliers retract into the handle. This is the original Leatherman with needle-nosed pliers, wire cutter, blade, metal and wood file, bottle and can openers, flathead, Phillips, and hexagonal screwdrivers and an awl. 180 g incl. leather carrying pouch."
+  "Content": {
+    "Name": "Leatherman Tool Survival",
+    "ShortDescription": "Das Original aus rostfreiem Edelstahl.",
+    "LongDescription": "Das Original aus rostfreiem Edelstahl. Der Zangenkopf lässt sich zum Transport in die Handgriffe falten. Das Ur-Leatherman mit Spitzzange, Drahtschneider, Klinge, Metall-, Holzfeile, Flaschen-/Dosenöffner, Maß, Kreuz- und 3 Schlitz-Schraubendreher sowie Ahle.180 g inkl. Lederetui."
+  },
+  "Product": {
+    "GrossListPrice": "72,95€",
+    "Image": "data/images/products/leatherman-tool.jpg",
+    "StockLevel" : "51"
+  }
 }
