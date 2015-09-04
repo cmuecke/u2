@@ -1,33 +1,45 @@
 import gulp from 'gulp';
-import server from 'gulp-express';
+import gls from 'gulp-live-server';
 import postcss from 'gulp-postcss';
+import sass from 'gulp-sass';
+import gutil from 'gulp-util';
+import rename from 'gulp-rename';
+import del from 'del';
+import runSequence from 'run-sequence';
 
 // POST CSS
-import nested from 'postcss-nested';
 import autoprefixer from 'autoprefixer-core';
 import mqpacker from 'css-mqpacker';
 import cssnano from 'cssnano';
-import simplevars from 'postcss-simple-vars';
 
-gulp.task('css', () =>
-    gulp.src('theme/src/**/*.css')
+const server = gls.new('index.js');
+
+gulp.task('styles', () =>
+    gulp.src('theme/src/styles/main.scss')
+        .pipe(sass().on('error', sass.logError))
         .pipe(
             postcss([
-                nested(),
-                simplevars({silent: true}),
                 autoprefixer(),
                 mqpacker(),
                 cssnano()
             ])
         )
-        .pipe(gulp.dest('theme/dist'))
-        .pipe(server.notify())
+        .on('error', (error) => gutil.log(gutil.colors.red(error.message)))
+        .pipe(rename('main.css'))
+        .pipe(gulp.dest('theme/dist/styles'))
+        .pipe(server.notify.apply(server))
+);
+
+gulp.task('clean', cb =>
+    del('theme/dist', {dot: true}, cb)
 );
 
 gulp.task('server', () => {
-    server.run(['index.js']);
-    gulp.watch(['theme/**/*.hbs', 'mock-data/**/*'], server.notify);
-    gulp.watch('theme/src/**/*.css', ['css']);
+    server.start();
+
+    gulp.watch(['theme/**/*.hbs'], (file) => server.notify.apply(server, [file]));
+    gulp.watch(['mock-data/**/*.*'], () => server.start.bind(server));
+    gulp.watch('theme/src/**/*.scss', ['styles']);
 });
 
-gulp.task('default', ['server', 'css']);
+gulp.task('default', ['clean'], cb => runSequence('server', 'styles', cb));
